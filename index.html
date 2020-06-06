@@ -1,0 +1,88 @@
+<!--DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="css/style.css">
+	<title>My page</title>
+</head>
+<body>
+	<h3>Enter any string to check whether it is a palindrome or not<h3>
+	<form class="form-group">
+		<input type="text" name="string" id="text1">
+		<button id="btn1" name="submit" onclick="palindrome">submit</button>
+	</form>
+	
+	
+
+
+
+	<script>
+	function palindrome(str) {
+  let st=str.toLowerCase();
+  let ss="";
+  for(let i=0;i<st.length;i++){
+    if((st.charCodeAt(i)>=97 && st.charCodeAt(i)<=122)||(st[i]>='0' && st[i]<='9')){
+      ss=ss+st[i];
+    }
+  }
+  console.log(ss)
+  let tt="";
+		  for(let i=ss.length-1; i>=0; i--){
+			tt=tt+ss[i];
+		  }
+		  if(tt===ss){
+			console.log("it is a palindrome");
+			return "Yes it is a palindrome";
+		  }
+		  else{
+			return "Not a palindrome";
+		  }
+}
+console.log(palindrome("_eye#s"));
+
+	</script>
+</body>
+</html-->
+<html>
+	<head>
+		<script>
+			function palindrome() {
+			var str = document.getElementById("N").value;
+			  let st=str.toLowerCase();
+			  let ss="";
+			  for(let i=0;i<st.length;i++){
+				if((st.charCodeAt(i)>=97 && st.charCodeAt(i)<=122)||(st[i]>='0' && st[i]<='9')){
+				  ss=ss+st[i];
+				}
+			  }
+			  console.log(ss)
+			  let tt="";
+			  for(let i=ss.length-1; i>=0; i--){
+				tt=tt+ss[i];
+			  }
+			  if(tt==ss){
+				window.alert("yes, is a palindrome");
+			  }
+			  else{
+				window.alert("Not a palindrome");
+			  }
+			}
+
+
+			
+		</script>
+	</head>
+	<body>
+		<br>
+		<h1>check Whether a string is a Palindrome or not</h1>
+		Enter The string :<input type="text" name="n" id = "N"/>
+		<hr color="cyan">
+		<br>
+		<center><button onClick="palindrome()">CHECK</button>
+	</body>
+</html>
+
+	
